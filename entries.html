@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Entries
+{% endblock %}
+
+{% block main %}
+
+    <div class="row">
+    {% for datum in datums %}
+
+        <div class="col-6 col-md-3">
+            <a class="card text-white bg-primary mb-3 stretched-link" href="/view/{{ datum.journalid }}" style="min-height: 10rem; max-height: 10rem; max-width: 18rem; background-color: {{ datum.color }} !important">
+
+              <div class="card-header">{{ datum.date }}</div>
+
+              <div class="card-body">
+
+                <h5 class="card-title"></h5>
+                <p class="card-text">{{ datum.textarea }}</p>
+
+
+
+              </div>
+
+            </a>
+        </div>
+
+    {% endfor %}
+    </div>
+
+{% endblock %}

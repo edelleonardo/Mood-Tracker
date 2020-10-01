@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    View
+{% endblock %}
+
+{% block main %}
+
+
+        <div class="row">
+
+            <div class="col-10 col-md-10">
+
+                <div>
+                    <h1>{{ date }} </h1>
+                </div>
+                <hr class="style2">
+
+                <div class="container">
+
+                    <p name="textarea"> {{ textarea }}</p>
+                </div>
+
+            </div>
+
+            <div class="col-1 col-md-1">
+
+            <a href="/edit/{{ journalid }}">
+                <button class="btn btn-primary" value="edit" style="background-color: {{ color }} !important">Edit</button>
+            </a>
+
+            </div>
+
+             <div class="col-1 col-md-1">
+            <a href="/delete/{{ journalid }}">
+                <button class="btn btn-outline-danger" value="delete">Delete</button>
+            </a>
+            </div>
+
+
+
+        </div>
+
+
+
+
+{% endblock %}

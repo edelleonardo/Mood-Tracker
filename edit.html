@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Write
+{% endblock %}
+
+{% block main %}
+
+    <form action="/edit/ {{journalid}}" method="post">
+
+        <div class="write-container">
+
+            <div class="row">
+
+                <div class="col-12 col-md-8">
+
+                    <div>
+                        <h1>Journal {{ date }}</h1>
+                    </div>
+
+                    <div class="form-group" id="textarea">
+
+                        <textarea class="form-control" name="textarea" rows="19"> {{ textarea }} </textarea>
+
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Done</button>
+
+                </div>
+
+                <div class="col-12 col-md-4" id="color-swatch">
+
+                    <div class="color-buttons">
+
+                        <div class="btn-group-toggle" data-toggle="buttons">
+
+                            <label class="btn btn-outline-success btn-lg btn-block" style="height: 70px;">
+
+                                <input type="radio" autocomplete="off" name="color" id="green" value="green"> Green
+
+                            </label>
+
+                            <label class="btn btn-outline-primary btn-lg btn-block" style="height: 70px;">
+
+                                <input type="radio" autocomplete="off" name="color" id="blue" value="blue"> Blue
+
+                            </label>
+
+
+                             <label class="btn btn-outline-danger btn-lg btn-block" style="height: 70px;">
+
+                                <input type="radio" autocomplete="off" name="color" id="red" value="red"> Red
+
+                            </label>
+
+                            <label class="btn btn-outline-warning btn-lg btn-block" style="height: 70px;">
+
+                                <input type="radio" autocomplete="off" name="color" id="yellow" value="yellow"> Yellow
+
+                            </label>
+
+                            <label class="btn btn-outline-secondary btn-lg btn-block" style="height: 70px;">
+
+                                <input type="radio"autocomplete="off" name="color" id="gray" value="gray"> Gray
+
+                            </label>
+
+                            <label class="btn btn-outline-dark btn-lg btn-block" style="height: 70px;">
+
+                                <input type="radio" autocomplete="off" name="color" id="black" value="black"> Black
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </form>
+{% endblock %}
