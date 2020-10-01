@@ -23,7 +23,7 @@ On the entries tab, you can see all your entries done starting from the latest. 
 
 
 TRACK
-------__
+-------
 On the track tab, you can see the date of your entries and there specific colors. You can see and track your mood colors to see if you're doing better!
 
 
